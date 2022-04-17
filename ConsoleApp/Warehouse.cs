@@ -8,11 +8,19 @@ namespace ConsoleApp
     {
         private string[] product;
         private int station;
-        public void init(string[] product, int station)
+
+        public Warehouse(string[] product, int station)
         {
             this.product = product;
             this.station = station;
         }
+
+        public Warehouse(string[] product)
+        {
+            this.product = product;
+        }
+        public Warehouse() { }
+
         public string[] Product { get; set; }
 
         public int Station

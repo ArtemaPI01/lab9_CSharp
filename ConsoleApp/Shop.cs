@@ -16,17 +16,20 @@ namespace ConsoleApp
         {
             counter++;
         }
-        ~Shop()
-        {
-            counter--;
-        }
 
-        public void init(string name, string type, string street, string time)
+        public Shop(string name, string type, string street, string time)
         {
+            counter++;
             this.name = name;
-            this.type= type;
+            this.type = type;
             this.street = street;
             this.time = time;
+        }
+
+        public Shop(string time)
+        {
+            this.time = time;
+            counter++;
         }
 
         public static int Counter

@@ -10,13 +10,18 @@ namespace ConsoleApp
         private int workers;
         private int count;
 
-        public void Init(FIO fio, int workers, int count)
-        {
+
+        public Boxoffice() { }
+
+        public Boxoffice(FIO fio, int workers, int count) {
             this.fio = fio;
             this.workers = workers;
             this.count = count;
         }
 
+        public Boxoffice(int workers) {
+            this.workers = workers;
+        }
         public int Workers
         {
             set

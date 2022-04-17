@@ -10,6 +10,21 @@ namespace ConsoleApp
         private int income;
         private int expenses;
 
+
+        public Owner(FIO fio, int income, int expenses)
+        {
+            this.fio = fio;
+            this.income = income;
+            this.expenses = expenses;
+        }
+
+        public Owner(FIO fio)
+        {
+            this.fio = fio;
+        }
+
+        public Owner() { }
+
         public int Income
         {
             set
@@ -39,14 +54,6 @@ namespace ConsoleApp
             get { return expenses; }
         }
 
-
-
-        public void init(FIO fio, int income, int expenses)
-        {
-            this.fio = fio;
-            this.income = income;
-            this.expenses = expenses;
-        }
         public void enter()
         {
             fio.enter();
