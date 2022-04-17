@@ -6,8 +6,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            FIO fio = new FIO();
-            fio.init("A", "Б", "В");
+            FIO fio = new FIO("A", "Б", "В");
             Owner Alisher = new Owner(fio, 0, 0);
             Alisher.enter();
             Alisher.print();
@@ -37,6 +36,11 @@ namespace ConsoleApp
             box1 += box;
             box1.Print();
             box1.CloakBoxoffice(100);
+            FIO Sur = new FIO("Klimov");
+            Console.WriteLine($"Фамилия {Sur.Surname}.");
+            Shop magaz = new Shop();
+            magaz.Name = "Ashan";
+            Console.WriteLine($"Название {magaz.Name}.");
         }
     }
 }

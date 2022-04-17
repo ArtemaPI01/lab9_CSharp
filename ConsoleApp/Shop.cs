@@ -28,24 +28,40 @@ namespace ConsoleApp
 
         public Shop(string time)
         {
-            this.time = time;
             counter++;
+            this.time = time;
         }
 
         public static int Counter
         {
-            get;
-            private set;
+            get { return counter; }
+            private set { counter = value; }
         } 
 
         public static void CountOfShop()
         {
             Console.WriteLine($"Кол-во магазинов: {counter}.\n");
         }
-        public string Name { get; set; }
-        public string Type { get; set; }
-        public string Street { get; set; }
-        public string Time { get; set; }
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        public string Type
+        {
+            get { return type; }
+            set { type = value; }
+        }
+        public string Street
+        {
+            get { return street; }
+            set { street = value; }
+        }
+        public string Time
+        {
+            get { return time; }
+            set { time = value; }
+        }
         public void enter()
         {
             Console.Write("Введите название:");

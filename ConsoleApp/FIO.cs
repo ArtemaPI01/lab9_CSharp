@@ -11,16 +11,31 @@ namespace ConsoleApp
         private string name;
         private string surname;
         private string patronymic;
-        public void init(string name, string surname, string patronymic)
-        {
+
+        public FIO() { }
+        public FIO(string surname) {
+            this.surname = surname;
+        }
+        public FIO(string name, string surname, string patronymic) {
             this.name = name;
             this.surname = surname;
             this.patronymic = patronymic;
         }
 
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Patronymic { get; set; }
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        public string Surname {
+            get { return surname; }
+            set { surname = value; }
+        }
+        public string Patronymic
+        {
+            get { return patronymic; }
+            set { patronymic = value; }
+        }
 
         public void enter()
         {

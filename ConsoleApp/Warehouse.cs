@@ -21,7 +21,14 @@ namespace ConsoleApp
         }
         public Warehouse() { }
 
-        public string[] Product { get; set; }
+        public string[] Product
+        {
+            set
+            {
+                product = value;
+            }
+            get { return product; }
+        }
 
         public int Station
         {
