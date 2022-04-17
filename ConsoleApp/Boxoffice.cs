@@ -11,7 +11,9 @@ namespace ConsoleApp
         private int count;
 
 
-        public Boxoffice() { }
+        public Boxoffice() {
+            fio = new FIO("", "", "");
+        }
 
         public Boxoffice(FIO fio, int workers, int count) {
             this.fio = fio;

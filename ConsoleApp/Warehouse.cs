@@ -19,7 +19,9 @@ namespace ConsoleApp
         {
             this.product = product;
         }
-        public Warehouse() { }
+        public Warehouse() {
+            product = new string[] { "" };
+        }
 
         public string[] Product
         {
@@ -27,7 +29,9 @@ namespace ConsoleApp
             {
                 product = value;
             }
-            get { return product; }
+            get { 
+                return product; 
+            }
         }
 
         public int Station
@@ -52,8 +56,15 @@ namespace ConsoleApp
         public void print()
         {
             Console.Write($"Склад:\nТовар: ");
-            foreach (string element in product)
-                Console.Write($"{element} ");
+            if (product.Length > 0)
+            {
+                Console.Write($"пусто.");
+            }
+            else
+            {
+                foreach (string element in product)
+                    Console.Write($"{element} ");
+            }
             Console.WriteLine($"\nКол-во пунктов приема: {station}");
         }
 

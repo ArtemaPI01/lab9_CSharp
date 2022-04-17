@@ -23,7 +23,9 @@ namespace ConsoleApp
             this.fio = fio;
         }
 
-        public Owner() { }
+        public Owner() {
+            fio = new FIO("", "", "");
+        }
 
         public int Income
         {

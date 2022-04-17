@@ -48,7 +48,15 @@ namespace ConsoleApp
         }
         public void print()
         {
-            Console.WriteLine($"Имя: {name}  Фамилия: {surname}  Отчество: {patronymic} ");
+            if (name == "" && surname == "" && patronymic == "")
+            {
+                if (name != "")
+                    Console.Write($"Имя: {name}  ");
+                if (surname != "")
+                    Console.Write($"Фамилия: {surname}  ");
+                if (patronymic != "")
+                    Console.Write($"Отчество: {patronymic}  ");
+            }
         }
     }
 }
